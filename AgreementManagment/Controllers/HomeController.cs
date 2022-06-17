@@ -1,4 +1,4 @@
-﻿using AgreementManagment.Models;
+﻿using AgreementManagment.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
