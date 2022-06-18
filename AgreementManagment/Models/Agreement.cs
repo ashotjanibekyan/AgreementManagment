@@ -15,4 +15,5 @@ public class Agreement
     public DateTime ExpirationDate { get; set; }
     public decimal ProductPrice { get; set; }
     public decimal NewPrice { get; set; }
+    public bool IsActive { get; set; }
 }

@@ -25,4 +25,7 @@ public class AgreementReadViewModel
 
     [DisplayName("New price")] 
     public decimal NewPrice { get; set; }
+
+    [DisplayName("Active")]
+    public bool IsActive { get; set; }
 }

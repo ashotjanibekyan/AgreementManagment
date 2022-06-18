@@ -182,6 +182,7 @@ namespace AgreementManagment.Controllers
                 ExpirationDate = vm.ExpirationDate,
                 ProductPrice = product.Price,
                 NewPrice = vm.NewPrice,
+                IsActive = vm.IsActive,
             };
         }
 
@@ -189,12 +190,13 @@ namespace AgreementManagment.Controllers
         {
             return new AgreementCreateOrEditViewModel()
             {
-                Id=agreement.Id,
+                Id = agreement.Id,
                 EffectiveDate = agreement.EffectiveDate,
                 ExpirationDate = agreement.ExpirationDate,
                 GroupId = agreement.Group.Id,
                 ProductId = agreement.Product.Id,
                 NewPrice = agreement.ProductPrice,
+                IsActive = agreement.IsActive,
             };
         }
     }
