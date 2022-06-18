@@ -11,8 +11,14 @@ public class AgreementReadViewModel
     [DisplayName("Group code")]
     public string GroupCode { get; set; }
 
+    [DisplayName("Group description")]
+    public string GroupDescription { get; set; }
+
     [DisplayName("Number")]
     public int Number { get; set; }
+
+    [DisplayName("Product description")]
+    public string ProductDescription { get; set; }
 
     [DisplayName("Effective date")] 
     public DateTime EffectiveDate { get; set; }

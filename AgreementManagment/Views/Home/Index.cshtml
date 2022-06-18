@@ -44,10 +44,10 @@
                 @Html.DisplayFor(modelItem => item.Username)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GroupCode)
+                <span data-toggle="tooltip" title="@Html.Raw(Html.Encode(@item.GroupDescription))">@Html.DisplayFor(modelItem => item.GroupCode)</span>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Number)
+                <span data-toggle="tooltip" title="@Html.Raw(Html.Encode(@item.ProductDescription))">@Html.DisplayFor(modelItem => item.Number)</span>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.EffectiveDate)

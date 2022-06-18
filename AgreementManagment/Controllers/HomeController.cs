@@ -42,9 +42,11 @@ namespace AgreementManagment.Controllers
                         ExpirationDate = agreement.ExpirationDate,
                         Username = _userManager.Users.First(user => user.Id == agreement.UserId).UserName,
                         GroupCode = agreement.Group.Code,
+                        GroupDescription = agreement.Group.Description,
                         ProductPrice = agreement.ProductPrice,
                         NewPrice = agreement.NewPrice,
-                        Number = agreement.Product.Number
+                        Number = agreement.Product.Number,
+                        ProductDescription = agreement.Product.Description,
                     }
                 ).ToListAsync();
 
@@ -62,8 +64,6 @@ namespace AgreementManagment.Controllers
         }
 
         // POST: Agreements/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         public async Task<IActionResult> Create(
             [Bind("GroupId,ProductId,EffectiveDate,ExpirationDate,NewPrice,IsActive")] AgreementCreateOrEditViewModel agreementViewModel)
@@ -95,8 +95,6 @@ namespace AgreementManagment.Controllers
         }
 
         // POST: Agreements/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         public async Task<IActionResult> Edit(
             int id,
